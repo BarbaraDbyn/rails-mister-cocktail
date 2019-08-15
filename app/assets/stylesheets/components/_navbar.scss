@@ -7,6 +7,30 @@
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-light .navbar-nav .active .nav-link{
+  color: $pink;
+  margin-right: 10px;
+  &:hover{
+    color: $my-green;
+  }
+}
+
+.collapse .navbar-nav .nav-item .nav-link{
+  font-weight: bolder;
+  border: 1px solid $my-green;
+  padding: 8px 24px;
+  border-radius: 50px;
+  &:hover{
+    color: $my-green;
+  }
+}
+
+.navbar{
+  border-bottom: 2px solid $pink;
+  height: 100px;
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }

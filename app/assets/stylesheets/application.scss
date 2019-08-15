@@ -11,3 +11,15 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+.signature{
+  font-family: $amatic;
+  font-size: 50px;
+  font-weight: 700;
+  color: $pink;
+}
+
+.margin-top{
+  margin-top: 20px;
+}
+

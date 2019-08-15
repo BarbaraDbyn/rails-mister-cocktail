@@ -1,0 +1,12 @@
+<div class="container margin-top">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h1>Design ton cocktail :</h1>
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+          <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+          <%= f.input :description %>
+          <%= f.button :submit, class: "btn btn-primary btn-index" %>
+        <% end %>
+    </div>
+  </div>
+</div>
