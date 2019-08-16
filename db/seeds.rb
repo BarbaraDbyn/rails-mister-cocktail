@@ -7,16 +7,21 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 puts 'Cleaning all...'
 Ingredient.destroy_all
+Cocktail.destroy_all
+Dose.destroy_all
 
 puts 'Creating ingredient...'
 Ingredient.create!(name: 'lemon')
 Ingredient.create!(name: 'ice')
 Ingredient.create!(name: 'mint leaves')
+puts 'Ingredients created'
 
 puts 'Creating cocktails...'
 Cocktail.create!(name: 'Mint Julep')
 Cocktail.create!(name: 'Whiskey Sour')
 Cocktail.create!(name: 'Mojito')
+puts 'Cocktails created'
 
 puts 'Creating doses...'
 Dose.create!(cocktail_id: 'Mint Julep', ingredient_id: 'lemon', description: 'super cocktail')
+puts 'Doses created'
