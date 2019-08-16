@@ -26,5 +26,12 @@
           <% end %>
         </tbody>
       </table>
+      <br>
+      <h3>Autre ingrédient ?</h3>
+        <%= simple_form_for [@cocktail, @dose] do |f| %>
+          <%= f.association :ingredient, input_html: { class: "beautiful-dropdown" }, include_hidden: false %>
+          <%= f.input :description %>
+          <%= f.button :submit, class: "btn btn-primary btn-index" %>
+        <% end %>
     </div>
   </div>
