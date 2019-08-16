@@ -23,5 +23,5 @@ Cocktail.create!(name: 'Mojito')
 puts 'Cocktails created'
 
 puts 'Creating doses...'
-Dose.create!(cocktail_id: 'Mint Julep', ingredient_id: 'lemon', description: 'super cocktail')
+Dose.create!(cocktail_id: Cocktail.first.id, ingredient_id: Ingredient.first.id, description: 'super cocktail')
 puts 'Doses created'
