@@ -2,6 +2,13 @@
 
   <h1 class="margin-top"><%= @cocktail.name %></h1>
   <%= link_to "Retour", cocktails_path %>
+  <br>
+  <% if @cocktail.photo? %>
+    <% background_url = cl_image_path @cocktail.photo, width: 540, height: 400, crop: :fill %>
+  <% else %>
+    <% background_url = 'https://source.unsplash.com/500x400/?cocktail'%>
+  <% end %>
+  <%= cl_image_tag(background_url, width: 540, height: 400 )%>
 
   <div class="row">
     <div class="col-sm-12 col-md-6">
